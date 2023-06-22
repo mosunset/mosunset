@@ -36,7 +36,7 @@ git push origin main
 厳密にはgit add -Aとgit add .は全く同じではない。
 git add -uとgit add -Aはレポジトリ内のどこで実行してもレポジトリ全体を処理するが、git add .はカレントディレクトリ以下のみを処理する。
 |New Files|	Modified Files|	Deleted Files|
-|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|
 |git add -u (--update)|	×|	○|	○|
 |git add -A (--all)|	○|	○|	○|
 |git add .|	○|	○|	○|
