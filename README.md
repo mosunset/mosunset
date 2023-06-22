@@ -107,7 +107,7 @@ git merge origin/main
 git pull origin main
 ```
 `git pull` は `fetch` と `marge` を同時に行う（大型開発では非推奨？）
-![格納される場所]()
+![格納される場所](https://github.com/mosunset/mosunset/assets/76692750/4e418d93-6fa4-4d35-9103-5c7fd4a9a032)
 ## 戻すとき
 `git fetch` でエラーの場合
 ```sh
