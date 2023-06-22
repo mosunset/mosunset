@@ -1,5 +1,4 @@
-<!-- マークダウンのチートシート
-https://qiita.com/Qiita/items/c686397e4a0f4f11683d
+<!-- 
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
 - 👯 I’m looking to collaborate on ...
@@ -64,13 +63,45 @@ git log
 ```
 
 ## リモートからローカルに取り込む
+### クローンの作成（最初のダウンロード）
+＊リポジトリ名のファイルでダウンロードされるので実行場所注意
 ```sh
 git clone https://github.com/ユーザ/[リポジトリ名].git ([ディレクトリ名])
 ```
+### リモートの変更をローカルに移しこむ(2回目以降のダウンロード)
+＊mainで作業中の場合<br>
+＊違う場合必ず↓を実行 main に checkout する
+```sh
+git checkout main
+```
+git pull は fetch と marge を同時に行う（大型開発では非推奨？）
+```sh
+git fetch origin main
+git merge origin/main
 
+git pull origin main
+```
+## 戻すとき
+git fetch   でエラーの場合
+```sh
+git reset --hard HEAD
+```
+git marge<br>
+git pull   でエラーの場合
+```sh
+git merge --abort
+git reset --hard HEAD
+```
+
+#### 各コマンドの違い
+https://qiita.com/wann/items/688bc17460a457104d7d
+
+### その他の取り込みの場合
 https://qiita.com/baby-0105/items/6481c7140e357ba04ffc
 
-
+# マークダウンの書き方
+Qiita用なので対応できていないところもある<br>
+https://qiita.com/Qiita/items/c686397e4a0f4f11683d
 
 
 
