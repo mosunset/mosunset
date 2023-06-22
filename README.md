@@ -134,13 +134,12 @@ Qiita用なので対応できていないところもある<br>
 https://qiita.com/Qiita/items/c686397e4a0f4f11683d
 
 # MyStats
-<a href="https://github.com/anuraghazra/github-readme-stats">
-  <img align="left" src="https://github-readme-stats.vercel.app/api?username=mosunset&count_private=true&show_icons=true&theme=codeSTACKr" style="height:210px;"/>
-</a>
-<a href="https://github.com/anuraghazra/github-readme-stats">
-  <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mosunset&count_private=true&theme=codeSTACKr" style="height:210px;"/>
-</a>
+<p align="left"> 
+  <img alt="Top Langs" height="190px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mosunset&layout=compact&show_icons=true&theme=codeSTACKr" />
+  <img alt="github stats" height="190px" src="https://github-readme-stats.vercel.app/api?username=mosunset&theme=codeSTACKr&show_icons=ture" />
+</p>
 
+[![trophy](https://github-profile-trophy.vercel.app/?username=mosunset&theme=codeSTACKr&column=8)](https://github.com/ryo-ma/github-profile-trophy)
 
 
 
