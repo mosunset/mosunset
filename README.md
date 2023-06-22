@@ -41,8 +41,8 @@ git push origin main
 | git add -A (--all)    |	○         |	○           | ○             | リポジトリ全体 |
 | git add .             | ○         |	○           |	○             | カレントディレクトリ以下 |
 
-## add の取り消し
-### git init 直後などそのファイルの最初のコミット前の時
+## `add` の取り消し
+### `git init` 直後などそのファイルの最初のコミット前の時
 ```sh
 git rm --cached [ファイル名]
 git rm --cached -r [ディレクトリ]
@@ -56,6 +56,32 @@ git restore --staged .
 git reset HEAD [ファイル名]
 git reset HEAD .
 ```
+## `commit` の取り消し
+- `--soft` ： ワークディレクトリの内容はそのままでコミットだけを取り消したい場合に使用
+- `--hard` ： コミット取り消した上でワークディレクトリの内容も書き換えたい場合に使用
+  - ワークディレクトリ = 作業ファイル？
+- `HEAD^` ： 直前のコミットを意味する
+- `HEAD~{n}` ： n個前のコミットを意味する
+  - `HEAD^`や`HEAD~{n}`の代わりにコミットのハッシュ値を書いても良い
+  - git の v1.8.5 からは、「HEAD」のエイリアスとして「@」が用意されている
+  - `HEAD~`と`HEAD^`と`@^`は同じ意味。
+  - `HEAD^^^`と`HEAD~3`と`HEAD~~~`と`HEAD~{3}`と`@^^^`は同じ意味
+- ただしWindowsの場合は`git reset --soft "HEAD^"`と、`HEAD^`を`"`で囲む
+```sh
+git reset --soft HEAD^
+```
+### `commit` の打消し
+作業ツリーを指定したコミット時点の状態にまで戻し、コミットを行う（コミットをなかったことにはせず、逆向きのコミットをすることで履歴を残す）
+```sh
+git revert コミットのハッシュ値
+```
+### `commit` の上書き
+コミットメッセージを変更したい時よく使う。
+「`git rebase`失敗した時、コンフリクトを避けるためにコミットを上書きする」という使い方もよくする。
+```sh
+git commit --amend
+```
+https://qiita.com/shuntaro_tamura/items/06281261d893acf049ed
 
 ## ログを確認（ローカル？）
 ```sh
@@ -69,25 +95,25 @@ git log
 git clone https://github.com/ユーザ/[リポジトリ名].git ([ディレクトリ名])
 ```
 ### リモートの変更をローカルに移しこむ(2回目以降のダウンロード)
-＊mainで作業中の場合<br>
-＊違う場合必ず↓を実行 main に checkout する
+＊`main`で作業中の場合<br>
+＊違う場合必ず↓を実行 `main` に `checkout` する
 ```sh
 git checkout main
 ```
-git pull は fetch と marge を同時に行う（大型開発では非推奨？）
 ```sh
 git fetch origin main
 git merge origin/main
 
 git pull origin main
 ```
+`git pull` は `fetch` と `marge` を同時に行う（大型開発では非推奨？）
+![格納される場所]()
 ## 戻すとき
-git fetch   でエラーの場合
+`git fetch` でエラーの場合
 ```sh
 git reset --hard HEAD
 ```
-git marge<br>
-git pull   でエラーの場合
+`git marge` `git pull` でエラーの場合
 ```sh
 git merge --abort
 git reset --hard HEAD
