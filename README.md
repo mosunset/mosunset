@@ -71,12 +71,13 @@ git reset HEAD .
 git reset --soft HEAD^
 ```
 ### `commit` の打消し
-作業ツリーを指定したコミット時点の状態にまで戻し、コミットを行う（コミットをなかったことにはせず、逆向きのコミットをすることで履歴を残す）
+作業ツリーを指定したコミット時点の状態にまで戻し、コミットを行う<br>
+（コミットをなかったことにはせず、逆向きのコミットをすることで履歴を残す）
 ```sh
 git revert コミットのハッシュ値
 ```
 ### `commit` の上書き
-コミットメッセージを変更したい時よく使う。
+コミットメッセージを変更したい時よく使う。<br>
 「`git rebase`失敗した時、コンフリクトを避けるためにコミットを上書きする」という使い方もよくする。
 ```sh
 git commit --amend
@@ -107,8 +108,8 @@ git merge origin/main
 git pull origin main
 ```
 `git pull` は `fetch` と `marge` を同時に行う（大型開発では非推奨？）
-![格納される場所](https://github.com/mosunset/mosunset/assets/76692750/4e418d93-6fa4-4d35-9103-5c7fd4a9a032)
-## 戻すとき
+![格納される場所](ブランチ違い.png)
+### 戻すとき
 `git fetch` でエラーの場合
 ```sh
 git reset --hard HEAD
@@ -124,6 +125,9 @@ https://qiita.com/wann/items/688bc17460a457104d7d
 
 ### その他の取り込みの場合
 https://qiita.com/baby-0105/items/6481c7140e357ba04ffc
+
+## コミットせずに変更を退避する
+https://qiita.com/chihiro/items/f373873d5c2dfbd03250
 
 # マークダウンの書き方
 Qiita用なので対応できていないところもある<br>
