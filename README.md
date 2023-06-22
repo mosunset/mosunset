@@ -20,7 +20,7 @@ Here are some ideas to get you started:
 ```sh
 git config --global user.name 作業環境ごとのユーザ名
 git config --global user.email 連絡のつくメールアドレス
-git config --global init.defaultBranch main
+git config --global init.defaultbranch main
 git init
 ```
 
