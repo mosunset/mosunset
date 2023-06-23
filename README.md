@@ -27,11 +27,13 @@ git commit -m "コミットメッセージ　わかりやすく書く"
 ```
 #### 2. リモートリポジトリを指定
 ```sh
+git branch -M main
 git remote add origin https://github.com/ユーザ/[作成したリポジトリ名].git
 ```
 #### 3. リモートにプッシュ 
 ```sh
-git push origin main
+git branch -M main
+git push -u origin main
 ```
 1, 3 を繰り返す
 ### ファイル選択の違い
