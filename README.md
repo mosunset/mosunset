@@ -131,6 +131,12 @@ https://qiita.com/baby-0105/items/6481c7140e357ba04ffc
 ## コミットせずに変更を退避する
 https://qiita.com/chihiro/items/f373873d5c2dfbd03250
 
+## gitのアップデート
+```sh
+git version
+git update-git-for-windows
+```
+
 # マークダウンの書き方
 Qiita用なので対応できていないところもある<br>
 https://qiita.com/Qiita/items/c686397e4a0f4f11683d
