@@ -48,9 +48,9 @@
         --ring: 142.4 71.8% 29.2%;
     }
 }
-* {
+/* * {
     outline: red solid 1px;
-}
+} */
 
 @layer base {
     * {
