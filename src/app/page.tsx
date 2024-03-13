@@ -6,12 +6,13 @@ export default function Home() {
         <>
             <PageTitle
                 title={"mosunset のサイト"}
-                description={"便利ツールまとめとポートフォリオ"}
+                description={"便利ツールまとめ&ポートフォリオ"}
             />
             <About />
             <div className="mx-auto max-w-[85rem] px-4 py-8 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-5xl grid-cols-[minmax(10rem,_1fr)_2fr] grid-rows-[minmax(4rem,4rem)_3fr] gap-x-4 gap-y-2 sm:grid">
-                    <h2>このサイトについて</h2>
+                <div className="mx-auto max-w-5xl">
+                    <h2 className="font-medium text-xl mb-2">このサイトについて</h2>
+                    <p>自分が気まぐれに追加する便利ツールとその他で作ったものをまとめていく</p>
                 </div>
             </div>
         </>
