@@ -27,8 +27,8 @@ import {
 const Header = () => {
     const { setTheme } = useTheme();
     return (
-        <header className=" mb-4 flex items-center justify-between">
-            <div>
+        <header className="mb-6 flex w-full max-w-screen-2xl items-center justify-between">
+            <h1>
                 <Link
                     className="flex-none text-xl font-semibold text-black dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                     href="/"
@@ -36,7 +36,7 @@ const Header = () => {
                 >
                     mosunset
                 </Link>
-            </div>
+            </h1>
             <div className="flex gap-2">
                 <div>
                     <NavigationMenu>

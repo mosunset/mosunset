@@ -4,7 +4,7 @@ import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 
 const Footer = () => {
     return (
-        <footer className="mx-auto w-full max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8">
+        <footer className="mx-auto w-full max-w-[85rem] border-t border-dashed px-4 py-10 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 items-center gap-5 text-center md:grid-cols-3">
                 <div>
                     <Link

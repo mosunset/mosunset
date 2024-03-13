@@ -5,7 +5,7 @@ const Main = ({
 }: Readonly<{
     children: React.ReactNode;
 }>) => {
-    return <main className="">{children}</main>;
+    return <main className="mb-8 w-full max-w-screen-2xl flex-grow">{children}</main>;
 };
 
 export default Main;

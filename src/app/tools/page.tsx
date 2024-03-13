@@ -1,7 +1,12 @@
+import PageTitle from "@/components/PageTitle/PageTitle";
 import React from "react";
 
 const page = () => {
-    return <div>tools</div>;
+    return (
+        <>
+            <PageTitle title={"Tools"} />
+        </>
+    );
 };
 
 export default page;
