@@ -1,11 +1,10 @@
 import PageTitle from "@/components/PageTitle/PageTitle";
-import ProductAll from "@/components/Product/ProductAll";
+import React from "react";
 
 const page = () => {
     return (
         <>
-            <PageTitle title={"Product"} />
-            <ProductAll />
+            <PageTitle title={""} />
         </>
     );
 };

@@ -1,0 +1,29 @@
+{
+    "product": [
+        {
+            "url": "youtube-watch-thumbnails",
+            "title": "YouTube Watch Thumbnails",
+            "description": "YouTubeについてのChrome拡張機能を作った"
+        },
+        {
+            "url": "gas-line",
+            "title": "GAS to LINE",
+            "description": "Gmail に届いた任意の条件のメールをGoogle Apps Scriptを使いLINEに送信。"
+        },
+        {
+            "url": "genshin-3d",
+            "title": "原神のキャラをブラウザで動かす",
+            "description": "Threejsを使いブラウザ上でMMDモデルを動かす"
+        },
+        {
+            "url": "web-yolo",
+            "title": "Javascriptで物体認識",
+            "description": "ブラウザJavascriptのみで物体認識"
+        },
+        {
+            "url": "kut-brass",
+            "title": "KUT BRASS",
+            "description": "高知工科大学吹奏楽部のサイト（非公式）"
+        }
+    ]
+}

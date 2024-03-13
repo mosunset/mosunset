@@ -8,7 +8,7 @@ const About = () => {
                     <div className="relative grid place-content-center sm:contents">
                         <Image
                             className="row-span-2 block aspect-[4/3] rounded-lg object-cover blur-sm sm:aspect-square sm:blur-none"
-                            src="myself.webp"
+                            src="about/myself.webp"
                             width={824}
                             height={824}
                             alt={"myself image is koala"}

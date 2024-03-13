@@ -11,8 +11,8 @@ export default function Home() {
             <About />
             <div className="mx-auto max-w-[85rem] px-4 py-8 sm:px-6 lg:px-8">
                 <div className="mx-auto max-w-5xl">
-                    <h2 className="font-medium text-xl mb-2">このサイトについて</h2>
-                    <p>自分が気まぐれに追加する便利ツールとその他で作ったものをまとめていく</p>
+                    <h2 className="mb-2 text-xl font-medium">このサイトについて</h2>
+                    <p>自分が作った「便利ツール」と「作ったもの」をまとめていく</p>
                 </div>
             </div>
         </>

@@ -8,11 +8,13 @@ const NotFound = () => {
                 <h1 className="block text-7xl font-bold text-gray-800 dark:text-white sm:text-9xl">
                     404
                 </h1>
-                <h1 className="block text-2xl font-bold text-white"></h1>
-                <p className="mt-3 text-gray-600 dark:text-gray-400">Oops, something went wrong.</p>
-                <p className="text-gray-600 dark:text-gray-400">
-                    Sorry, we couldn&apos;t find your page.
+                <h1 className="block text-2xl font-bold dark:text-white">Not Found</h1>
+                <p className="mt-3 text-gray-600 dark:text-gray-400">
+                    ページが見つかりませんでした
                 </p>
+                {/* <p className="text-gray-600 dark:text-gray-400">
+                    Sorry, we couldn&apos;t find your page.
+                </p> */}
                 <div className="mt-5 flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-3">
                     <Button asChild>
                         <Link className="gap-x-2" href="/">
@@ -30,7 +32,7 @@ const NotFound = () => {
                             >
                                 <path d="m15 18-6-6 6-6" />
                             </svg>
-                            Back to examples
+                            ホームに戻る
                         </Link>
                     </Button>
                 </div>

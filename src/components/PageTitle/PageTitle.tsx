@@ -9,10 +9,10 @@ import React from "react";
  *
  * @example <PageTitle title={"Title"} description={"description"} />
  */
-const PageTitle = ({ title, description }: { title: string; description?: string }) => {
+const PageTitle = ({ title, description }: { title: string | undefined; description?: string }) => {
     return (
         <div className="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
+            <div className="mx-auto max-w-5xl text-center">
                 <h2 className="block text-3xl font-bold text-gray-800 dark:text-white sm:text-4xl md:text-5xl">
                     {title}
                 </h2>
