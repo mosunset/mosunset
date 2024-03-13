@@ -17,7 +17,7 @@ const ProductAll = async () => {
                     <div className="aspect-w-16 aspect-h-10">
                         <Image
                             className="w-full rounded-xl object-cover shadow-sm"
-                            src={"/product/" + content.url + ".webp"}
+                            src={"/mosunset/product/" + content.url + ".webp"}
                             alt={content.description}
                             width={1280}
                             height={720}
