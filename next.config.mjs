@@ -9,6 +9,7 @@ const SUB_DIRECTORY = "/mosunset";
 const prefixPath = isProd ? SUB_DIRECTORY : "";
 
 const nextConfig = {
+    basePath: prefixPath,
     reactStrictMode: true,
     trailingSlash: true,
     output: "export",
