@@ -21,8 +21,11 @@ const About = () => {
                         <p>岐阜県で生まれた</p>
                         <p>岐阜県で育った</p>
                         <p>高知県で大学に通うため一人暮らし中</p>
-                        <p className="mt-4">触ったことがあるもの</p>
-                        <p>HTML, CSS, Javascript, Typescript, Nextjs, Python, Java, Assembly, C#, VBA, Swift</p>
+                        <p className="mt-2">触ったことがあるもの</p>
+                        <p>
+                            HTML, CSS, Javascript, Typescript, Nextjs, Python, Java, Assembly, C#,
+                            VBA, Swift
+                        </p>
                     </div>
                 </div>
             </div>
