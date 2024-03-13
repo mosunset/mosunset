@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Suspense } from "react";
 import GoogleAnalytics from "@/components/GoogleAnalytics/GoogleAnalytics";
 import Header from "@/components/BasicHtml/Header";
 import Footer from "@/components/BasicHtml/Footer";
-import { Suspense } from "react";
-import { ThemeProvider } from "@/components/theme-provider";
 import Overlap from "@/components/BasicHtml/Overlap";
 import Main from "@/components/BasicHtml/Main";
 
