@@ -6,7 +6,7 @@ const ibp = (path: string) => {
     /* 公開時のサブディレクトリ */
     const SUB_DIRECTORY = "/mosunset";
     const prefixPath = isProd ? SUB_DIRECTORY : "";
-    return prefixPath + path;
+    return prefixPath +"/" + path;
 };
 
 export default ibp;
