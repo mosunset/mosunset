@@ -21,13 +21,19 @@ const Page = () => {
 
     const convertUnicodeToString = (unicodeStr: string) => {
         let str = "";
-        const regex = /\\u(\w{4})/g;
+        const regex = /\\u([\da-fA-F]{1,4})/g;
         unicodeStr.replace(regex, (match, grp) => {
             const charCode = parseInt(grp, 16);
             str += String.fromCodePoint(charCode);
             return match;
         });
         return str;
+    };
+
+    const convert = () => {
+        const unicode = document.getElementById("unicode");
+        console.log(convertUnicodeToString(unicode?.textContent as string))
+        setConvertedString(convertUnicodeToString(unicode?.textContent as string));
     };
 
     const copyToClipboard = () => {
@@ -40,7 +46,7 @@ const Page = () => {
             <div className="mx-auto max-w-7xl">
                 <div>
                     <div className="grid w-full gap-1.5">
-                        <Label htmlFor="unicode">Unicode 値を入力 例:\u61\u62\u63\u64 = abcd</Label>
+                        <Label htmlFor="unicode">Unicode 値を入力 例: \u41\u42\u63\u64 = ABcd</Label>
                         <Textarea
                             placeholder="Unicode 値を入力してください"
                             id="unicode"
@@ -59,7 +65,8 @@ const Page = () => {
                             onClick={() => {
                                 copyToClipboard();
                                 toast({
-                                    className: "bg-[#20b256] text-[#fff1f2] dark:text-[#052e16] font-medium",
+                                    className:
+                                        "bg-[#20b256] text-[#fff1f2] dark:text-[#052e16] font-medium",
                                     description: "クリップボードにコピーしました",
                                 });
                             }}

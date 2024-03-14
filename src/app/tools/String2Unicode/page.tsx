@@ -56,7 +56,8 @@ const Page = () => {
                             onClick={() => {
                                 copyToClipboard();
                                 toast({
-                                    className: "bg-[#20b256] text-[#fff1f2] dark:text-[#052e16] font-medium",
+                                    className:
+                                        "bg-[#20b256] text-[#fff1f2] dark:text-[#052e16] font-medium",
                                     description: "クリップボードにコピーしました",
                                 });
                             }}
