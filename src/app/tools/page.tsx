@@ -31,11 +31,11 @@ const page = () => {
                                         src={
                                             content.img
                                                 ? ibp("tools/" + content.url + ".webp")
-                                                : `http://via.placeholder.com/1280x720/66ffaa/111111?text=${content.title}`
+                                                : `http://via.placeholder.com/640x360/66ffaa/111111?text=${content.title}`
                                         }
                                         alt={content.description}
-                                        width={1280}
-                                        height={720}
+                                        width={640}
+                                        height={360}
                                     />
                                 </div>
                                 <h3 className="mt-3 text-xl text-gray-800 dark:text-gray-300 dark:hover:text-white">
