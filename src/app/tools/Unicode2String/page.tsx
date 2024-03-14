@@ -3,54 +3,57 @@
 import PageTitle from "@/components/PageTitle/PageTitle";
 import React, { useState } from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/components/ui/use-toast";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 
 const Page = () => {
-    const [inputValue, setInputValue] = useState("");
+    const [unicodeValue, setUnicodeValue] = useState("");
     const [convertedString, setConvertedString] = useState("");
     const { toast } = useToast();
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setInputValue(e.target.value);
-        setConvertedString(convertToUnicode(e.target.value));
+    const handleUnicodeChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        setUnicodeValue(e.target.value);
+        setConvertedString(convertUnicodeToString(e.target.value));
     };
 
-    const convertToUnicode = (str: string) => {
-        let unicodeStr = "";
-        for (let i = 0; i < str.length; i++) {
-            const charCode = str.codePointAt(i)?.toString(16);
-            if (charCode) {
-                unicodeStr += "\\u" + charCode;
-            }
-        }
-        return unicodeStr;
+    const convertUnicodeToString = (unicodeStr: string) => {
+        let str = "";
+        const regex = /\\u(\w{4})/g;
+        unicodeStr.replace(regex, (match, grp) => {
+            const charCode = parseInt(grp, 16);
+            str += String.fromCodePoint(charCode);
+            return match;
+        });
+        return str;
     };
+
     const copyToClipboard = () => {
         navigator.clipboard.writeText(convertedString);
     };
 
     return (
         <>
-            <PageTitle title={"String to Unicode"} />
+            <PageTitle title={"Unicode to String"} />
             <div className="mx-auto max-w-7xl">
                 <div>
                     <div className="grid w-full gap-1.5">
-                        <Label htmlFor="string">変換したい文字列を入力</Label>
+                        <Label htmlFor="unicode">Unicode 値を入力 例:\u61\u62\u63\u64 = abcd</Label>
                         <Textarea
-                            placeholder="なにか文字列を入力してください"
-                            id="string"
-                            value={inputValue}
-                            onChange={handleInputChange}
+                            placeholder="Unicode 値を入力してください"
+                            id="unicode"
+                            value={unicodeValue}
+                            onChange={handleUnicodeChange}
                         />
                     </div>
                     <div className="mt-4 grid gap-4">
                         <div>
-                            <Label htmlFor="unicode">Unicode 値:</Label>
-                            <Textarea id="unicode" value={convertToUnicode(inputValue)} readOnly />
+                            <Label htmlFor="converted" className="mr-2">
+                                変換された文字列:
+                            </Label>
+                            <Textarea id="converted" value={convertedString} readOnly />
                         </div>
                         <Button
                             onClick={() => {
@@ -60,18 +63,18 @@ const Page = () => {
                                     description: "クリップボードにコピーしました",
                                 });
                             }}
+                            className=""
                         >
-                            Unicode を クリップボードにコピー
+                            文字列 を クリップボードにコピー
                         </Button>
                     </div>
                 </div>
-
                 <div className="mt-8">
                     <p className="flex items-center">
-                        Unicode から 文字列に変換
+                        文字列 から Unicodeに変換
                         <ChevronRightIcon />
-                        <Link href={"/tools/Unicode2String"} className="text-blue-700 underline">
-                            Unicode to String
+                        <Link href={"/tools/String2Unicode"} className="text-blue-700 underline">
+                            String to Unicode
                         </Link>
                     </p>
                 </div>

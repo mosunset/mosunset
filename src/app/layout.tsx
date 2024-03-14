@@ -9,6 +9,7 @@ import Header from "@/components/BasicHtml/Header";
 import Footer from "@/components/BasicHtml/Footer";
 import Overlap from "@/components/BasicHtml/Overlap";
 import Main from "@/components/BasicHtml/Main";
+import { Toaster } from "@/components/ui/toaster";
 
 const fontSans = FontSans({
     subsets: ["latin"],
@@ -46,6 +47,7 @@ export default function RootLayout({
                         <Main>{children}</Main>
                         <Footer />
                     </Overlap>
+                    <Toaster />
                 </ThemeProvider>
             </body>
         </html>
