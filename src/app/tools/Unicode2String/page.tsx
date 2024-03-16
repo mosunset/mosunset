@@ -8,8 +8,10 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
+import ToolsPath from "../_data/toolsPath";
 
 const Page = () => {
+    const tools_path = ToolsPath();
     const [unicodeValue, setUnicodeValue] = useState("");
     const [convertedString, setConvertedString] = useState("");
     const { toast } = useToast();
@@ -30,23 +32,19 @@ const Page = () => {
         return str;
     };
 
-    const convert = () => {
-        const unicode = document.getElementById("unicode");
-        console.log(convertUnicodeToString(unicode?.textContent as string))
-        setConvertedString(convertUnicodeToString(unicode?.textContent as string));
-    };
-
     const copyToClipboard = () => {
         navigator.clipboard.writeText(convertedString);
     };
 
     return (
         <>
-            <PageTitle title={"Unicode to String"} />
+            <PageTitle title={tools_path?.title} description={tools_path?.description} />
             <div className="mx-auto max-w-7xl">
                 <div>
                     <div className="grid w-full gap-1.5">
-                        <Label htmlFor="unicode">Unicode 値を入力 例: \u41\u42\u63\u64 = ABcd</Label>
+                        <Label htmlFor="unicode">
+                            Unicode 値を入力 例: \u41\u42\u63\u64 = ABcd
+                        </Label>
                         <Textarea
                             placeholder="Unicode 値を入力してください"
                             id="unicode"

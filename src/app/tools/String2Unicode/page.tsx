@@ -8,8 +8,10 @@ import { useToast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
+import ToolsPath from "../_data/toolsPath";
 
 const Page = () => {
+    const tools_path = ToolsPath();
     const [inputValue, setInputValue] = useState("");
     const [convertedString, setConvertedString] = useState("");
     const { toast } = useToast();
@@ -35,7 +37,7 @@ const Page = () => {
 
     return (
         <>
-            <PageTitle title={"String to Unicode"} />
+            <PageTitle title={tools_path?.title} description={tools_path?.description} />
             <div className="mx-auto max-w-7xl">
                 <div>
                     <div className="grid w-full gap-1.5">

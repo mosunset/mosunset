@@ -13,6 +13,13 @@
             "description": "",
             "img": false,
             "show": true
+        },
+        {
+            "url": "UnicodeCaesar",
+            "title": "Unicode to Caesar cipher",
+            "description": "Unicode基準でシーザー暗号を生成する",
+            "img": false,
+            "show": true
         }
     ]
 }
