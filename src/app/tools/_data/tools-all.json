@@ -3,21 +3,21 @@
         {
             "url": "String2Unicode",
             "title": "String to Unicode",
-            "description": "",
+            "description": "文字列からUnicodeへ",
             "img": false,
             "show": true
         },
         {
             "url": "Unicode2String",
             "title": "Unicode to String",
-            "description": "",
+            "description": "Unicodeから文字列へ",
             "img": false,
             "show": true
         },
         {
             "url": "UnicodeCaesar",
             "title": "Unicode to Caesar cipher",
-            "description": "Unicode基準でシーザー暗号を生成する",
+            "description": "Unicode基準でシーザー暗号を生成",
             "img": false,
             "show": true
         }
