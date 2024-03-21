@@ -96,7 +96,7 @@ const Page = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="text-4xl font-bold text-center">{result}</div>
+                    <div className="text-center text-4xl font-bold">{result}</div>
                 </div>
             </>
         );

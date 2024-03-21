@@ -17,7 +17,7 @@ const Footer = () => {
                 <div className="grid justify-items-center">
                     <Navigation
                         ulcss="text-center"
-                        licss="relative inline-block pe-8 before:absolute before:end-3 before:top-1/2 before:-translate-y-1/2 before:text-gray-300 before:content-['/'] last:pe-0 last-of-type:before:hidden dark:before:text-gray-600"
+                        licss="relative inline-block pe-4 before:absolute before:end-1 before:top-1/2 before:-translate-y-1/2 before:text-gray-300 before:content-['/'] last:pe-0 last-of-type:before:hidden dark:before:text-gray-600"
                         linkcss="inline-flex p-2 gap-x-2 text-sm text-gray-500 hover:text-gray-800 dark:text-gray-500 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                     />
                 </div>
