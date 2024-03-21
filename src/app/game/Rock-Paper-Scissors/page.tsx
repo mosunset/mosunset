@@ -29,12 +29,13 @@ const Page = () => {
         settabValue(value);
     };
     const Result = (choice: string) => {
+        // TODO: 未完成
         setuserValue(choice);
         switch (tabValue) {
             case "random":
                 setcpuValue(choices[getRandomInt(0, 3)]);
                 // setcpuValue("rock")
-                const diff = (choices.indexOf(cpuValue) - choices.indexOf(userValue) +3) % 3;
+                const diff = (choices.indexOf(cpuValue) - choices.indexOf(userValue) + 3) % 3;
 
                 if (diff === 0) {
                     setResult("Draw");
@@ -137,5 +138,3 @@ const Page = () => {
 };
 
 export default Page;
-
-// このコードをもと修正し正しく動作するようにしてください。
