@@ -147,7 +147,7 @@ git pull origin main
 ```
 
 `git pull` は `fetch` と `marge` を同時に行う（大型開発では非推奨？）
-![格納される場所](public\github-readme\ブランチ違い.png)
+![格納される場所](public\github-readme\ブランチ違い.webp)
 
 ### 戻すとき
 
