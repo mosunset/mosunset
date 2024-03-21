@@ -1,5 +1,4 @@
 import { ImageResponse } from "next/og";
-import { Noto_Sans_JP as FontSans } from "next/font/google";
 
 // Route segment config
 export const runtime = "edge";
@@ -18,7 +17,7 @@ export default async function Image() {
     // Font
     const interSemiBold = fetch(
         new URL(
-            "/public/font/NotoSansJP-VariableFont_wght.ttf",
+            "../../public/font/NotoSansJP-VariableFont_wght.ttf",
             import.meta.url
         )
     ).then((res) => res.arrayBuffer());
