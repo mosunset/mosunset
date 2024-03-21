@@ -21,6 +21,7 @@ import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
 import { ReloadIcon } from "@radix-ui/react-icons";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 //TODO: reCAPTCHAを実装する
 
@@ -127,10 +128,21 @@ const Contact = () => {
                                 送信
                             </Button>
                         ) : (
-                            <Button type="button" className="w-full" disabled>
-                                <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
-                                送信
-                            </Button>
+                            <TooltipProvider>
+                                <Tooltip>
+                                    <TooltipTrigger asChild>
+                                        <div>
+                                            <Button type="button" className="w-full" disabled>
+                                                <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
+                                                送信
+                                            </Button>
+                                        </div>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p>送信できません</p>
+                                    </TooltipContent>
+                                </Tooltip>
+                            </TooltipProvider>
                         )}
                     </form>
                 </Form>

@@ -23,7 +23,13 @@ const page = () => {
                                         className="aspect-video w-full rounded-xl object-cover shadow-sm"
                                         src={
                                             content.img
-                                                ? ibp("game/" + content.url + ".webp")
+                                                ? ibp(
+                                                      "game/" +
+                                                          content.url +
+                                                          "/" +
+                                                          content.url +
+                                                          ".webp"
+                                                  )
                                                 : `http://via.placeholder.com/640x360/66ffaa/111111?text=${content.title}`
                                         }
                                         alt={content.description}
