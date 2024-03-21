@@ -1,23 +1,16 @@
 import PageTitle from "@/components/PageTitle/PageTitle";
 import React from "react";
-import data from "@/app/tools/_data/tools-all.json";
+import data from "@/app/game/_data/game-all.json";
 import Link from "next/link";
-import ibp from "@/components/imageBasePath";
 import Image from "next/image";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
-
+import ibp from "@/components/imageBasePath";
 const page = () => {
-    let datacount = 0;
-    for (let i = 0; i < data.tools.length; i++) {
-        if (data.tools[i].show) {
-            datacount++;
-        }
-    }
     return (
         <>
-            <PageTitle title={"Tools"} description={`${datacount}個のツール`} />
+            <PageTitle title={"Game"} />
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {data.tools.map(
+                {data.game.map(
                     (content) =>
                         content.show && (
                             <Link
@@ -30,12 +23,12 @@ const page = () => {
                                         className="aspect-video w-full rounded-xl object-cover shadow-sm"
                                         src={
                                             content.img
-                                                ? ibp("tools/" + content.url + ".webp")
+                                                ? ibp("game/" + content.url + ".webp")
                                                 : `http://via.placeholder.com/640x360/66ffaa/111111?text=${content.title}`
                                         }
                                         alt={content.description}
-                                        width={640}
-                                        height={360}
+                                        width={1280}
+                                        height={720}
                                     />
                                 </div>
                                 <h3 className="mt-3 text-xl text-gray-800 dark:text-gray-300 dark:hover:text-white">

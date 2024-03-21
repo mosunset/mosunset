@@ -1,0 +1,11 @@
+{
+    "game": [
+        {
+            "url": "Rock-Paper-Scissors",
+            "title": "じゃんけん",
+            "description": "じゃんけんゲーム",
+            "img": true,
+            "show": true
+        }
+    ]
+}

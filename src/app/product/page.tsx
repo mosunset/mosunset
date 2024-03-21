@@ -27,7 +27,7 @@ const page = () => {
                             >
                                 <div className="aspect-w-16 aspect-h-10">
                                     <Image
-                                        className="w-full rounded-xl object-cover shadow-sm"
+                                        className="aspect-video w-full rounded-xl object-cover shadow-sm"
                                         src={ibp("product/" + content.url + ".webp")}
                                         alt={content.description}
                                         width={1280}
