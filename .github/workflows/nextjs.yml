@@ -71,8 +71,8 @@ jobs:
       - name: create .env.local
         run: |
           touch .env.local
-          echo MICROCMS_SERVICE_DOMAIN=${{ secrets.MICROCMS_SERVICE_DOMAIN }} >> .env.local
-          echo MICROCMS_API_KEY=${{ secrets.MICROCMS_API_KEY }} >> .env.local
+          echo NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN=${{ secrets.MICROCMS_SERVICE_DOMAIN }} >> .env.local
+          echo NEXT_PUBLIC_MICROCMS_API_KEY=${{ secrets.MICROCMS_API_KEY }} >> .env.local
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact

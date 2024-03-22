@@ -16,19 +16,19 @@ export type Blog = {
 };
 
 export type Article = Blog & MicroCMSContentId & MicroCMSDate;
-
-if (!process.env.MICROCMS_SERVICE_DOMAIN) {
+console.log("test " + !process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN);
+if (!process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN) {
     throw new Error("MICROCMS_SERVICE_DOMAIN is required");
 }
 
-if (!process.env.MICROCMS_API_KEY) {
+if (!process.env.NEXT_PUBLIC_MICROCMS_API_KEY) {
     throw new Error("MICROCMS_API_KEY is required");
 }
 
 // Initialize Client SDK.
 export const client = createClient({
-    serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
-    apiKey: process.env.MICROCMS_API_KEY,
+    serviceDomain: process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN,
+    apiKey: process.env.NEXT_PUBLIC_MICROCMS_API_KEY,
 });
 
 // ブログ一覧を取得
