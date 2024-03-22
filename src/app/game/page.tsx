@@ -1,4 +1,4 @@
-import PageTitle from "@/components/PageTitle/PageTitle";
+import PageTitle from "@/components/PageTitle";
 import React from "react";
 import data from "@/app/game/_data/game-all.json";
 import Link from "next/link";

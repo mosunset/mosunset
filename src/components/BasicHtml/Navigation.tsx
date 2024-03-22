@@ -48,12 +48,12 @@ const Navigation = ({
                     </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem className={licss}>
-                    <Link href="/product/" legacyBehavior passHref>
+                    <Link href="/blog/" legacyBehavior passHref>
                         <NavigationMenuLink
                             className={linkcss ? linkcss : navigationMenuTriggerStyle()}
                             onClick={onClick}
                         >
-                            Product
+                            Blog
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>

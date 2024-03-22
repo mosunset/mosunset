@@ -1,6 +1,6 @@
 "use client";
 
-import PageTitle from "@/components/PageTitle/PageTitle";
+import PageTitle from "@/components/PageTitle";
 import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";

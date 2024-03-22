@@ -1,5 +1,5 @@
 import About from "@/components/About/About";
-import PageTitle from "@/components/PageTitle/PageTitle";
+import PageTitle from "@/components/PageTitle";
 
 export default function Home() {
     return (

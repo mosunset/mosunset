@@ -1,4 +1,4 @@
-import PageTitle from "@/components/PageTitle/PageTitle";
+import PageTitle from "@/components/PageTitle";
 import React from "react";
 
 const page = () => {

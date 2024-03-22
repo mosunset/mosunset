@@ -1,6 +1,6 @@
 "use client";
 
-import PageTitle from "@/components/PageTitle/PageTitle";
+import PageTitle from "@/components/PageTitle";
 import React from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
