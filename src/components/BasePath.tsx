@@ -1,4 +1,4 @@
-const ibp = (path: string) => {
+const bp = (path: string) => {
     /* 本番環境と開発環境の分岐用のフラグ */
     const isProd = process.env.NODE_ENV === "production";
     // console.log(process.env.NODE_ENV);
@@ -9,4 +9,4 @@ const ibp = (path: string) => {
     return prefixPath + "/" + path;
 };
 
-export default ibp;
+export default bp;

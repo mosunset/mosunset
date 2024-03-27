@@ -20,11 +20,12 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
+import bp from "@/components/BasePath";
 
 // トークナイザーのビルド
 function buildTokenizer() {
     return new Promise<kuromoji.Tokenizer<kuromoji.IpadicFeatures>>((resolve, reject) => {
-        kuromoji.builder({ dicPath: "/tools/dict" }).build((err, tokenizer) => {
+        kuromoji.builder({ dicPath: bp("/tools/dict") }).build((err, tokenizer) => {
             if (err) {
                 reject(err);
             } else {

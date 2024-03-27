@@ -4,7 +4,7 @@ import data from "@/app/game/_data/game-all.json";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
-import ibp from "@/components/imageBasePath";
+import ibp from "@/components/BasePath";
 const page = () => {
     return (
         <>

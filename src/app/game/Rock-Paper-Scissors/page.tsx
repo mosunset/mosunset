@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PageTitle from "@/components/PageTitle";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import ibp from "@/components/imageBasePath";
+import ibp from "@/components/BasePath";
 
 const Page = () => {
     const [tabValue, setTabValue] = useState("random");

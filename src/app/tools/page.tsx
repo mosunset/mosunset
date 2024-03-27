@@ -2,7 +2,7 @@ import PageTitle from "@/components/PageTitle";
 import React from "react";
 import data from "@/app/tools/_data/tools-all.json";
 import Link from "next/link";
-import ibp from "@/components/imageBasePath";
+import ibp from "@/components/BasePath";
 import Image from "next/image";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 
