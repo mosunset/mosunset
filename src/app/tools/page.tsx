@@ -31,7 +31,7 @@ const page = () => {
                                         src={
                                             content.img
                                                 ? ibp("tools/" + content.url + ".webp")
-                                                : `http://via.placeholder.com/640x360/66ffaa/111111?text=${content.title}`
+                                                : `http://via.placeholder.com/640x360/66ffaa/111111${content.title == "" ? "" : "?text=" + content.title}`
                                         }
                                         alt={content.description}
                                         width={640}
@@ -39,7 +39,7 @@ const page = () => {
                                     />
                                 </div>
                                 <h3 className="mt-3 text-xl text-gray-800 dark:text-gray-300 dark:hover:text-white">
-                                    {content.title}
+                                    {content.title == "" ? content.url : content.title}
                                 </h3>
 
                                 <h3 className="mt-2 flex-grow text-gray-700 dark:text-gray-300 dark:hover:text-white">

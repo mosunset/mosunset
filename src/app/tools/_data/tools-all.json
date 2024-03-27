@@ -20,6 +20,62 @@
             "description": "Unicode基準でシーザー暗号を生成",
             "img": false,
             "show": true
+        },
+        {
+            "url": "ColorPicker",
+            "title": "",
+            "description": "画像からも。その色から派生する色",
+            "img": false,
+            "show": false
+        },
+        {
+            "url": "DummyText",
+            "title": "",
+            "description": "マルコフ連鎖も使ってみたい",
+            "img": false,
+            "show": false
+        },
+        {
+            "url": "Image2Text",
+            "title": "",
+            "description": "OCR",
+            "img": false,
+            "show": false
+        },
+        {
+            "url": "StringLength",
+            "title": "文字数カウント",
+            "description": "",
+            "img": false,
+            "show": false
+        },
+        {
+            "url": "UnixTime2Date",
+            "title": "",
+            "description": "",
+            "img": false,
+            "show": false
+        },
+        {
+            "url": "PasswordGenerator",
+            "title": "",
+            "description": "",
+            "img": false,
+            "show": false
+        },
+        {
+            "url": "OnlineConverter",
+            "title": "長さ、重量、温度、通貨などの様々な単位を相互変換",
+            "description": "",
+            "img": false,
+            "show": false
+        },
+        {
+            "url": "MorphologicalAnalysis",
+            "title": "形態素解析",
+            "description": "kuromoji.js",
+            "img": false,
+            "show": true
         }
     ]
 }

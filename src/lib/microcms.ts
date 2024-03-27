@@ -16,7 +16,6 @@ export type Blog = {
 };
 
 export type Article = Blog & MicroCMSContentId & MicroCMSDate;
-console.log("test " + !process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN);
 if (!process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN) {
     throw new Error("MICROCMS_SERVICE_DOMAIN is required");
 }
