@@ -69,14 +69,7 @@ const Page = () => {
 
     const analysis = async (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         const text = e.target.value.replace(/\n/gm, "");
-        const maxText = 15000;
-        if(text.length > maxText){
-            setIsLoading(true);
-            setMessage(`入力文字数を${maxText}文字以下にしてください。`);
-            return;
-        }else{
-            setIsLoading(false);
-        }
+        
         setUserInputText(text);
         if (time.current) {
             clearTimeout(time.current);
