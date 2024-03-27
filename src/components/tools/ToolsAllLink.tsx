@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 const ToolsAllLink = () => {
     const pathname = usePathname();
     return (
-        <div className="mt-8 grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <div className="mt-20 grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3">
             {toolsAll.tools.map((tools) =>
                 tools.show && !pathname.includes(`/tools/${tools.url}/`) ? (
                     <div key={tools.url} className="flex items-center">
