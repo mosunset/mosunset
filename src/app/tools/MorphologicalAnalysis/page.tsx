@@ -58,14 +58,15 @@ const Page = () => {
     const [viewAll, setViewAll] = useState<boolean>(false);
 
     const analysis = async (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-        const text = (e.target.value);
+        const text = e.target.value.replace(/\n/gm, "");
+
         setUserInputText(text);
         if (time.current) {
             clearTimeout(time.current);
         }
         time.current = setTimeout(async () => {
             setTokens(await mainAnalysis(text));
-        }, 1900);
+        }, 1000);
     };
     const mainAnalysis = async (text: string): Promise<kuromoji.IpadicFeatures[]> => {
         // トークナイザーのビルド
@@ -103,7 +104,7 @@ const Page = () => {
                         <Label htmlFor="airplane-mode">すべての要素を表示する</Label>
                     </div>
                     <Table>
-                        <TableCaption>負荷軽減のため二秒間隔で処理しています。</TableCaption>
+                        <TableCaption>負荷軽減のため1秒間隔で処理しています。</TableCaption>
                         <TableHeader>
                             <TableRow>
                                 {viewAll ? (

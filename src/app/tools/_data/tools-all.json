@@ -4,21 +4,21 @@
             "url": "String2Unicode",
             "title": "String to Unicode",
             "description": "文字列からUnicodeへ",
-            "img": false,
+            "img": true,
             "show": true
         },
         {
             "url": "Unicode2String",
             "title": "Unicode to String",
             "description": "Unicodeから文字列へ",
-            "img": false,
+            "img": true,
             "show": true
         },
         {
             "url": "UnicodeCaesar",
             "title": "Unicode to Caesar cipher",
             "description": "Unicode基準でシーザー暗号を生成",
-            "img": false,
+            "img": true,
             "show": true
         },
         {
@@ -74,7 +74,7 @@
             "url": "MorphologicalAnalysis",
             "title": "形態素解析",
             "description": "kuromoji.js",
-            "img": false,
+            "img": true,
             "show": true
         }
     ]
