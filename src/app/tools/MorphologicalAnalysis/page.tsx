@@ -22,19 +22,6 @@ import {
 } from "@/components/ui/table";
 import bp from "@/components/BasePath";
 
-// トークナイザーのビルド
-function buildTokenizer() {
-    return new Promise<kuromoji.Tokenizer<kuromoji.IpadicFeatures>>((resolve, reject) => {
-        kuromoji.builder({ dicPath: bp("/tools/dict") }).build((err, tokenizer) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(tokenizer);
-            }
-        });
-    });
-}
-
 type Tokenizer = {
     word_id: number; // 辞書内での単語ID
     word_type: "KNOWN" | "UNKOWN"; // 単語タイプ(辞書に登録されている単語ならKNOWN, 未知語ならUNKNOWN)
@@ -57,6 +44,36 @@ const Page = () => {
     const [userInputText, setUserInputText] = useState<string>("");
     const [tokens, setTokens] = useState<kuromoji.IpadicFeatures[]>([]);
     const [viewAll, setViewAll] = useState<boolean>(false);
+    const [loading, setLoading] = useState<boolean>(false);
+
+    // トークナイザーのビルド
+    const buildTokenizer = () => {
+        return new Promise<kuromoji.Tokenizer<kuromoji.IpadicFeatures>>((resolve, reject) => {
+            let loadingStarted = false;
+
+            const progressCallback = (status: number) => {
+                if (!loadingStarted) {
+                    loadingStarted = true;
+                    setLoading(true);
+                }
+            };
+
+            // オブジェクトのアサーションを追加
+            const options = {
+                dicPath: bp("/tools/dict"),
+                progress: progressCallback,
+            } as kuromoji.TokenizerBuilderOption;
+
+            kuromoji.builder(options).build((err, tokenizer) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    setLoading(false);
+                    resolve(tokenizer);
+                }
+            });
+        });
+    };
 
     const analysis = async (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         const text = e.target.value.replace(/\n/gm, "");
@@ -93,7 +110,9 @@ const Page = () => {
                         id="Morphological"
                         value={userInputText}
                         onChange={analysis}
+                        disabled={loading}
                     />
+                    {loading && <div>Loading...</div>} {/* ローディング中にメッセージを表示 */}
                 </div>
                 <div className="mt-4 grid w-full gap-1.5">
                     <div className="flex items-center space-x-2">
