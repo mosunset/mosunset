@@ -46,6 +46,7 @@ const Page = () => {
     const [tokens, setTokens] = useState<kuromoji.IpadicFeatures[]>([]);
     const [viewAll, setViewAll] = useState<boolean>(false);
     const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [message,setMessage] = useState<string>("辞書をダウンロード中");
     // トークナイザーのビルド
     const buildTokenizer = () => {
         return new Promise<kuromoji.Tokenizer<kuromoji.IpadicFeatures>>((resolve, reject) => {
@@ -68,7 +69,14 @@ const Page = () => {
 
     const analysis = async (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         const text = e.target.value.replace(/\n/gm, "");
-
+        const maxText = 15000;
+        if(text.length > maxText){
+            setIsLoading(true);
+            setMessage(`入力文字数を${maxText}文字以下にしてください。`);
+            return;
+        }else{
+            setIsLoading(false);
+        }
         setUserInputText(text);
         if (time.current) {
             clearTimeout(time.current);
@@ -109,7 +117,7 @@ const Page = () => {
                     />
                     {isLoading && (
                         <div className="flex items-center gap-2">
-                            辞書をダウンロード中
+                            {message}
                             <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
                         </div>
                     )}
