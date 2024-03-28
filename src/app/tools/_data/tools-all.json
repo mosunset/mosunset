@@ -22,9 +22,23 @@
             "show": true
         },
         {
+            "url": "MorphologicalAnalysis",
+            "title": "形態素解析",
+            "description": "kuromoji.js",
+            "img": true,
+            "show": true
+        },
+        {
+            "url": "PasswordGenerator",
+            "title": "PasswordGenerator",
+            "description": "Passwordを生成",
+            "img": false,
+            "show": true
+        },
+        {
             "url": "ColorPicker",
             "title": "",
-            "description": "画像からも。その色から派生する色",
+            "description": "画像からも。&その色から派生する色",
             "img": false,
             "show": false
         },
@@ -57,13 +71,6 @@
             "show": false
         },
         {
-            "url": "PasswordGenerator",
-            "title": "",
-            "description": "",
-            "img": false,
-            "show": false
-        },
-        {
             "url": "OnlineConverter",
             "title": "長さ、重量、温度、通貨などの様々な単位を相互変換",
             "description": "",
@@ -71,11 +78,18 @@
             "show": false
         },
         {
-            "url": "MorphologicalAnalysis",
-            "title": "形態素解析",
-            "description": "kuromoji.js",
-            "img": true,
-            "show": true
+            "url": "素因数分解",
+            "title": "",
+            "description": "",
+            "img": false,
+            "show": false
+        },
+        {
+            "url": "_sample",
+            "title": "",
+            "description": "",
+            "img": false,
+            "show": false
         }
     ]
 }

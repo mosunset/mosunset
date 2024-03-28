@@ -2,7 +2,7 @@ import PageTitle from "@/components/PageTitle";
 import React from "react";
 import data from "@/app/tools/_data/tools-all.json";
 import Link from "next/link";
-import ibp from "@/components/BasePath";
+import bp from "@/components/BasePath";
 import Image from "next/image";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 
@@ -30,7 +30,7 @@ const page = () => {
                                         className="aspect-video w-full rounded-xl object-cover shadow-sm"
                                         src={
                                             content.img
-                                                ? ibp("tools/" + content.url + ".webp")
+                                                ? bp("/tools/" + content.url + ".webp")
                                                 : `http://via.placeholder.com/640x360/66ffaa/111111${content.title == "" ? "" : "?text=" + content.title}`
                                         }
                                         alt={content.description}

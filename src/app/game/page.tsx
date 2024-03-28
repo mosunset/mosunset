@@ -4,7 +4,7 @@ import data from "@/app/game/_data/game-all.json";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
-import ibp from "@/components/BasePath";
+import bp from "@/components/BasePath";
 const page = () => {
     return (
         <>
@@ -23,8 +23,8 @@ const page = () => {
                                         className="aspect-video w-full rounded-xl object-cover shadow-sm"
                                         src={
                                             content.img
-                                                ? ibp(
-                                                      "game/" +
+                                                ? bp(
+                                                      "/game/" +
                                                           content.url +
                                                           "/" +
                                                           content.url +

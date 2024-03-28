@@ -46,7 +46,7 @@ const Page = () => {
     const [tokens, setTokens] = useState<kuromoji.IpadicFeatures[]>([]);
     const [viewAll, setViewAll] = useState<boolean>(false);
     const [isLoading, setIsLoading] = useState<boolean>(true);
-    const [message,setMessage] = useState<string>("辞書をダウンロード中");
+    const [message, setMessage] = useState<string>("辞書をダウンロード中");
     // トークナイザーのビルド
     const buildTokenizer = () => {
         return new Promise<kuromoji.Tokenizer<kuromoji.IpadicFeatures>>((resolve, reject) => {
@@ -69,7 +69,7 @@ const Page = () => {
 
     const analysis = async (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         const text = e.target.value.replace(/\n/gm, "");
-        
+
         setUserInputText(text);
         if (time.current) {
             clearTimeout(time.current);

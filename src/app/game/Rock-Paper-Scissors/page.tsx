@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PageTitle from "@/components/PageTitle";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import ibp from "@/components/BasePath";
+import bp from "@/components/BasePath";
 
 const Page = () => {
     const [tabValue, setTabValue] = useState("random");
@@ -63,8 +63,8 @@ const Page = () => {
     };
 
     const ResultHtml = () => {
-        const userChoiceImage = ibp(`game/Rock-Paper-Scissors/${userValue}.webp`);
-        const cpuChoiceImage = ibp(`game/Rock-Paper-Scissors/${cpuValue}.webp`);
+        const userChoiceImage = bp(`/game/Rock-Paper-Scissors/${userValue}.webp`);
+        const cpuChoiceImage = bp(`/game/Rock-Paper-Scissors/${cpuValue}.webp`);
 
         return (
             <>
@@ -116,7 +116,7 @@ const Page = () => {
                             onClick={() => Result(choice)}
                         >
                             <Image
-                                src={ibp(`game/Rock-Paper-Scissors/${choice}.webp`)}
+                                src={bp(`/game/Rock-Paper-Scissors/${choice}.webp`)}
                                 alt={choice}
                                 width={55}
                                 height={55}
