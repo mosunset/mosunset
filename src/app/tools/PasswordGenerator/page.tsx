@@ -210,7 +210,7 @@ const Page = () => {
                                 value={symbol}
                                 aria-label={"Toggle " + symbol}
                                 key={index}
-                                className='data-[state="on"]:bg-[hsl(var(--primary))]'
+                                className='!data-[state="on"]:bg-[hsl(var(--primary))]'
                             >
                                 {symbol}
                             </ToggleGroupItem>
