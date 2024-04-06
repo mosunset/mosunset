@@ -8,9 +8,9 @@
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-# github pages
+<!--# github pages
 https://mosunset.github.io/mosunset/
-
+-->
 # git 使い方自分向け（超初心者）
 
 ## 最初に設定・確認すること
