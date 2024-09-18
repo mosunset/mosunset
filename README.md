@@ -1,4 +1,8 @@
-# git 使い方自分向け（超初心者）
+# mosunset
+
+<https://mosunset.com/>
+
+## Git 使い方 （自分用超初心者向け）
 
 ## 最初に設定・確認すること
 
@@ -11,21 +15,21 @@ git init
 
 ## プログラム作成中のコマンド
 
-#### 1. ローカルにコミット
+### 1. ローカルにコミット
 
 ```sh
 git add --all
 git commit -m "コミットメッセージ　わかりやすく書く"
 ```
 
-#### 2. リモートリポジトリを指定
+### 2. リモートリポジトリを指定
 
 ```sh
 git branch -M main
 git remote add origin https://github.com/ユーザ/[作成したリポジトリ名].git
 ```
 
-#### 3. リモートにプッシュ
+### 3. リモートにプッシュ
 
 ```sh
 git branch -M main
@@ -64,16 +68,16 @@ git reset HEAD .
 
 ## `commit` の取り消し
 
--   `--soft` ： ワークディレクトリの内容はそのままでコミットだけを取り消したい場合に使用
--   `--hard` ： コミット取り消した上でワークディレクトリの内容も書き換えたい場合に使用
-    -   ワークディレクトリ = 作業ファイル？
--   `HEAD^` ： 直前のコミットを意味する
--   `HEAD~{n}` ： n個前のコミットを意味する
-    -   `HEAD^`や`HEAD~{n}`の代わりにコミットのハッシュ値を書いても良い
-    -   git の v1.8.5 からは、「HEAD」のエイリアスとして「@」が用意されている
-    -   `HEAD~`と`HEAD^`と`@^`は同じ意味。
-    -   `HEAD^^^`と`HEAD~3`と`HEAD~~~`と`HEAD~{3}`と`@^^^`は同じ意味
--   ただしWindowsの場合は`git reset --soft "HEAD^"`と、`HEAD^`を`"`で囲む
+- `--soft` ： ワークディレクトリの内容はそのままでコミットだけを取り消したい場合に使用
+- `--hard` ： コミット取り消した上でワークディレクトリの内容も書き換えたい場合に使用
+  - ワークディレクトリ = 作業ファイル？
+- `HEAD^` ： 直前のコミットを意味する
+- `HEAD~{n}` ： n個前のコミットを意味する
+  - `HEAD^`や`HEAD~{n}`の代わりにコミットのハッシュ値を書いても良い
+  - git の v1.8.5 からは、「HEAD」のエイリアスとして「@」が用意されている
+  - `HEAD~`と`HEAD^`と`@^`は同じ意味。
+  - `HEAD^^^`と`HEAD~3`と`HEAD~~~`と`HEAD~{3}`と`@^^^`は同じ意味
+- ただしWindowsの場合は`git reset --soft "HEAD^"`と、`HEAD^`を`"`で囲む
 
 ```sh
 git reset --soft HEAD^
@@ -97,7 +101,7 @@ git revert コミットのハッシュ値
 git commit --amend
 ```
 
-https://qiita.com/shuntaro_tamura/items/06281261d893acf049ed
+<https://qiita.com/shuntaro_tamura/items/06281261d893acf049ed>
 
 ## ログを確認（ローカル？）
 
@@ -149,17 +153,17 @@ git merge --abort
 git reset --hard HEAD
 ```
 
-#### 各コマンドの違い
+### 各コマンドの違い
 
-https://qiita.com/wann/items/688bc17460a457104d7d
+<https://qiita.com/wann/items/688bc17460a457104d7d>
 
 ### その他の取り込みの場合
 
-https://qiita.com/baby-0105/items/6481c7140e357ba04ffc
+<https://qiita.com/baby-0105/items/6481c7140e357ba04ffc>
 
 ## コミットせずに変更を退避する
 
-https://qiita.com/chihiro/items/f373873d5c2dfbd03250
+<https://qiita.com/chihiro/items/f373873d5c2dfbd03250>
 
 ## gitのアップデート
 
@@ -168,13 +172,7 @@ git version
 git update-git-for-windows
 ```
 
-# MyStats
-
-## 自分のWEBサイト
-
-https://mosunset.com/
-
-## Stats Card
+---
 
 <p align="left">
   <img alt="Top Langs" height="180px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mosunset&layout=compact&show_icons=true&theme=codeSTACKr" />
