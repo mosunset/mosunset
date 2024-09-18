@@ -32,6 +32,8 @@ git config --global init.defaultbranch main
 git init
 ```
 
+test Conflict
+
 ---
 
 ## **プログラムの作成中に使うコマンド**
