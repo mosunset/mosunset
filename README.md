@@ -183,11 +183,6 @@ git version
 git update-git-for-windows
 ```
 
-# マークダウンの書き方
-
-Qiita用なので対応できていないところもある<br>
-https://qiita.com/Qiita/items/c686397e4a0f4f11683d
-
 # MyStats
 
 ## 自分のWEBサイト
