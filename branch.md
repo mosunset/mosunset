@@ -125,12 +125,6 @@ Gitブランチを使用して作業する際には、さまざまなシチュ�
 2. **リモートのブランチをローカルにチェックアウトする**
 
    ```bash
-   git checkout -b feature/new-feature origin/feature/new-feature
-   ```
-
-   または
-
-   ```bash
    git switch -c feature/new-feature origin/feature/new-feature
    ```
 
@@ -189,4 +183,3 @@ Gitブランチを使用して作業する際には、さまざまなシチュ�
      ```bash
      git rebase --continue
      ```
-
