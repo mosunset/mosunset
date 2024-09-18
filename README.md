@@ -32,10 +32,6 @@ git config --global init.defaultbranch main
 git init
 ```
 
-test Conflict
-
----
-
 ## **現在のローカルリポジトリの状態を確認**
 
 - **ステージングされた変更**（コミット準備が整ったファイル）
