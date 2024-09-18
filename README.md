@@ -190,15 +190,9 @@ https://qiita.com/Qiita/items/c686397e4a0f4f11683d
 
 # MyStats
 
-## 学校リポジトリ
-
-https://github.com/kut-info-pl2/
-
 ## 自分のWEBサイト
 
-### JavaScriptのみで3Dデータを表示しアニメーションさせる
-
-https://mosunset.github.io/genshin3d/
+https://mosunset.com/
 
 ## Stats Card
 
