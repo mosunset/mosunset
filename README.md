@@ -2,11 +2,7 @@
 
 [mosunset website](https://mosunset.com)
 
----
-
 ## **Git の使い方 （自分向け 超初心者用）**
-
----
 
 ### 目次
 1. [Git の初期設定](#git-の初期設定)  
@@ -19,8 +15,6 @@
 8. [Git のバージョン確認・アップデート](#git-のバージョン確認アップデート)  
 9. [Gitログの確認](#gitログの確認)  
 10. [参考情報](#参考情報)  
-
----
 
 ## Git の初期設定
 
@@ -37,8 +31,6 @@ git config --global user.email "あなたのメールアドレス"
 git config --global init.defaultbranch main
 ```
 
----
-
 ## Git リポジトリの作成
 
 ### 新規のプロジェクト（フォルダ）で Git を使い始める場合
@@ -48,8 +40,6 @@ git config --global init.defaultbranch main
 git init
 ```
 - これで `.git` フォルダが作成され、Git の管理対象フォルダになります。
-
----
 
 ## ローカルでの基本操作
 
@@ -75,7 +65,7 @@ git commit -m "ここにコミットメッセージを書く"
 #### `git add` の選択範囲の違い
 
 | コマンド                    | 新規ファイル | 変更ファイル | 削除ファイル | 適用範囲                     |
-|:---------------------------|:----------:|:----------:|:----------:|:-------------------------:|
+|:|:-:|:-:|:-:|:-:|
 | `git add -u` (`--update`) |     ×      |     ○      |     ○      | リポジトリ全体（追跡済み）  |
 | `git add -A` (`--all`)    |     ○      |     ○      |     ○      | リポジトリ全体             |
 | `git add .`               |     ○      |     ○      |     ○      | **カレントディレクトリ以下** |
@@ -96,8 +86,6 @@ git commit -m "ここにコミットメッセージを書く"
   git reset HEAD ファイル名
   git reset HEAD .
   ```
-
----
 
 ## リモートリポジトリとの連携
 
@@ -142,8 +130,6 @@ git merge origin/main
 git pull origin main
 ```
 
----
-
 ## 複数ブランチによる開発（チーム開発向け）
 
 1人でもブランチを使うと「動く状態を保つ main」「試作コードを試す branch」など役割分担ができて便利です。複数人で開発する場合は特に重要になります。
@@ -184,8 +170,6 @@ git merge feature/new_function
 
 #### プルリクエスト (Pull Request)
 - GitHub を使う場合、branch をプッシュ後にプルリクエストを作成し、レビューを経て `main` にマージする流れが一般的です。
-
----
 
 ## コミットの取り消し方法
 
@@ -233,8 +217,6 @@ git commit --amend
 ```
 > push後にこれを行うと履歴が変わるため、やはり注意が必要です。
 
----
-
 ## 変更の一時退避 (stash)
 
 コミットするほどではない作業内容を一時的に中断したいときに使います。
@@ -246,8 +228,6 @@ git stash
 # 再開したいときに取り出す
 git stash pop
 ```
-
----
 
 ## Git のバージョン確認・アップデート
 
@@ -263,7 +243,7 @@ git version
 git update-git-for-windows
 ```
 
----
+
 
 ## Gitログの確認
 
@@ -274,7 +254,7 @@ git log
 ```
 - 一覧を簡潔に見る場合は `git log --oneline` が便利。
 
----
+
 
 ## 参考情報
 
@@ -282,7 +262,7 @@ git log
 - [GitHub Docs](https://docs.github.com/)  
 - [mosunset website](https://mosunset.com)  
 
----
+
 
 <p align="left">
   <img alt="Top Langs" height="180px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mosunset&layout=compact&show_icons=true&theme=codeSTACKr" />
