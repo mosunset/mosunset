@@ -11,4 +11,6 @@
 
 <hr>
 
-<span style="margin-left:15px;">・ windows serup</span>
+<span style="margin-left:15px;">・ Windows Setup</span>
+
+* [セットアップ手順](/windows-serup/setup-guide.md "Windows PC セットアップ手順 | mosunset")
