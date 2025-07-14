@@ -29,6 +29,8 @@
 | アンインストーラ   | Geek Uninstaller |
 | OS 拡張・便利機能 | PowerToys        |
 | ディスク使用量可視化 | WizTree          |
+<!-- | システム監視      | HWiNFO           |
+| クリップボード管理  | Ditto            | -->
 
 ### ドキュメント & PDF
 
@@ -48,6 +50,8 @@
 | 画像処理 CLI   | ImageMagick     |
 | 動画編集       | DaVinci Resolve |
 | 配信／録画      | OBS Studio      |
+| 画像編集        | GIMP            |
+| 音声編集        | Audacity        |
 
 ### 開発環境
 
@@ -65,6 +69,7 @@
 | サブカテゴリ     | ソフトウェア         |
 | ---------- | -------------- |
 | UI/UX デザイン | Figma          |
+| 3D モデリング    | Blender        |
 | 動画／映像制作    | （上記「メディア処理」参照） |
 
 ### AI / 機械学習
@@ -72,12 +77,15 @@
 | サブカテゴリ     | ソフトウェア    |
 | ---------- | --------- |
 | LLM ローカル実行 | LM Studio |
+| AI 画像生成      | Stability Matrix |
 
 ### コミュニケーション
 
 | サブカテゴリ     | ソフトウェア           |
 | ---------- | ---------------- |
 | チャット & コラボ | Discord / Slack |
+| ビデオ会議       | Zoom / Microsoft Teams |
+<!-- | メールクライアント  | Thunderbird     | -->
 
 ### ウェブブラウザ
 
@@ -97,6 +105,8 @@
 | サブカテゴリ | ソフトウェア                   |
 | ------ | ------------------------ |
 | ファイル同期 | Google Drive for Desktop |
+<!-- | バックアップ   | Macrium Reflect Free     |
+| リモートデスクトップ | AnyDesk / TeamViewer    | -->
 
 ### オフィススイート
 
