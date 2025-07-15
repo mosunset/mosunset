@@ -196,6 +196,8 @@ winget install Rustlang.Rustup
 winget install AstralSoftware.Uv
 ```
 
+### Explorer右クリックメニューの変更
+
 ---
 
 ## 6. トラブルシューティング
