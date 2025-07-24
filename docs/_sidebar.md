@@ -14,3 +14,9 @@
 <span style="margin-left:15px;">・ Windows Setup</span>
 
 * [セットアップ手順](/windows-serup/setup-guide.md "Windows PC セットアップ手順 | mosunset")
+
+<hr>
+
+<span style="margin-left:15px;">・ 作業チェックリスト</span>
+
+* [1](/check.md)
