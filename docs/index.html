@@ -1,153 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>mosunset</title>
-        <meta name="description" content="mosunset" />
-        <meta property="og:title" content="mosunset" />
-        <meta property="og:description" content="mosunset" />
+        <meta name="description" content="mosunset の個人用メモ（Windows セットアップ、Docsify の設定、資料作成チェックリスト）" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ja_JP" />
-        <meta property="og:image" content="logo.webp" />
-        <meta property="og:image:alt" content="mosunset | ロゴ" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="mosunset" />
-        <meta name="twitter:description" content="mosunset" />
-        <meta name="twitter:image" content="logo.webp" />
-        <meta name="twitter:image:alt" content="mosunset | ロゴ" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
-        />
-        <link
-            rel="stylesheet"
-            href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/addons/vue.min.css"
-        />
+        <meta property="og:title" content="mosunset" />
+        <meta property="og:description" content="mosunset の個人用メモ（Windows セットアップ、Docsify の設定、資料作成チェックリスト）" />
+        <meta property="og:url" content="https://mosunset.github.io/mosunset/" />
+        <meta property="og:image" content="https://mosunset.github.io/mosunset/logo.webp" />
+        <meta name="twitter:card" content="summary" />
         <link rel="icon" href="logo.webp" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@5/dist/themes/addons/vue.min.css" />
         <style>
-            :root {
-                --scroll-padding-top: 100px;
+            .app-name-link img {
+                width: 80px;
+                margin: 0 auto;
             }
         </style>
     </head>
     <body>
-        <div id="app">Please wait...</div>
+        <div id="app"></div>
         <script>
-            let svgCounter = 0;
             window.$docsify = {
-                // logo: 'logo.webp', // nameとの排他表示になるため_sidebar.mdにlogoを設定している
                 name: "mosunset",
+                logo: "logo.webp",
                 repo: "mosunset/mosunset",
+                homepage: "windows-setup/setup-guide.md",
                 loadSidebar: true,
-                subMaxLevel: 3,
                 maxLevel: 4,
+                subMaxLevel: 2,
                 auto2top: true,
-                executeScript: true,
-                formatUpdated: "{YYYY}/{MM}/{DD} {HH}:{mm}:{ss}.{fff}",
                 notFoundPage: true,
+                externalLinkTarget: "_blank",
+                externalLinkRel: "noopener noreferrer",
+                search: {
+                    paths: "auto",
+                    depth: 3,
+                    placeholder: "検索",
+                    noData: "見つかりませんでした",
+                },
+                copyCode: {
+                    buttonText: "コピー",
+                    errorText: "エラー",
+                    successText: "コピーしました",
+                },
+                pagination: {
+                    previousText: "前のページ",
+                    nextText: "次のページ",
+                    crossChapter: true,
+                    crossChapterText: true,
+                },
                 markdown: {
                     renderer: {
+                        // ```mermaid のコードブロックを図にする
                         code({ text, lang }) {
                             if (lang === "mermaid") {
-                                const svgName = `mermaid-svg-${svgCounter++}`;
-                                const MERMAID_CONTAINER_ID = `${svgName}-container`;
-
-                                mermaid
-                                    .render(svgName, text)
-                                    .then(({ svg }) => {
-                                        const containerElement =
-                                            document.querySelector(
-                                                `#${MERMAID_CONTAINER_ID}`
-                                            );
-                                        if (containerElement) {
-                                            containerElement.innerHTML = svg;
-                                        } else {
-                                            console.error(
-                                                `Error: #${MERMAID_CONTAINER_ID} not found`
-                                            );
-                                        }
-                                    })
-                                    .catch((error) => console.error(error));
-                                return `<div class="mermaid" id="${MERMAID_CONTAINER_ID}"></div>`;
+                                return `<div class="mermaid">${text}</div>`;
                             }
                             return this.origin.code.apply(this, arguments);
                         },
                     },
                 },
-                search: {
-                    maxAge: 86400000,
-                    paths: "auto",
-                    placeholder: "ドキュメントを検索...",
-                    noData: "検索結果がありません",
-                    depth: 3,
-                    hideOtherSidebarContent: false,
-                },
-                copyCode: {
-                    buttonText: "コピー",
-                    errorText: "エラー",
-                    successText: "コピー完了",
-                },
-                pagination: {
-                    previousText: "← 前のページ",
-                    nextText: "次のページ →",
-                    crossChapter: true,
-                    crossChapterText: true,
-                },
-                tabs: {
-                    persist: true,
-                    sync: true,
-                    theme: "classic",
-                    tabComments: true,
-                    tabHeadings: true,
-                },
-                externalLinkRel: "noopener noreferrer nofollow",
-                externalLinkTarget: "_blank",
-                alias: {
-                    "/.*/_sidebar.md": "/_sidebar.md",
-                },
                 plugins: [
                     function (hook, vm) {
-                        hook.beforeEach(function (html) {
-                            const url =
-                                "https://github.com/mosunset/mosunset/blob/main/docs/" +
-                                vm.route.file;
-                            const editHtml =
-                                "[ドキュメントを編集](" + url + ")\n";
-                            return editHtml + html;
+                        // 記事の最後に「GitHub で編集」のリンクを付ける
+                        hook.beforeEach(function (markdown) {
+                            const url = "https://github.com/mosunset/mosunset/blob/main/docs/" + vm.route.file;
+                            return markdown + "\n\n---\n\n[GitHub で編集](" + url + ")\n";
+                        });
+                        hook.doneEach(function () {
+                            mermaid.run();
                         });
                     },
                 ],
             };
         </script>
-        <!-- Docsify v5 -->
-        <script src="//cdn.jsdelivr.net/npm/docsify@5"></script>
-        <script src="//cdn.jsdelivr.net/npm/mermaid@12/dist/mermaid.min.js"></script>
+
+        <!-- docsify 本体と公式プラグイン -->
+        <script src="https://cdn.jsdelivr.net/npm/docsify@5/dist/docsify.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsify@5/dist/plugins/search.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsify@5/dist/plugins/zoom-image.min.js"></script>
+
+        <!-- サードパーティのプラグイン -->
+        <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@3"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+
+        <!-- mermaid -->
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@12/dist/mermaid.min.js"></script>
         <script>
             mermaid.initialize({ startOnLoad: false });
         </script>
 
-        <!-- プラグイン -->
-        <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/search.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@3"></script>
-        <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
-        <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/zoom-image.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/external-script.min.js"></script>
-
-        <!-- 言語サポート -->
-        <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-rust.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-docker.min.js"></script>
+        <!-- コードハイライト（記事で使っている言語） -->
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-powershell.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
     </body>
 </html>
